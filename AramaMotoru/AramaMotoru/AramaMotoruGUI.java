@@ -3,8 +3,6 @@ package AramaMotoru;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.net.URI;
 
 public class AramaMotoruGUI {
@@ -28,7 +26,7 @@ public class AramaMotoruGUI {
         scrollPane.setPreferredSize(new Dimension(580, 300));
 
         // API seçim kutusu
-        String[] apiSecenekleri = {"Wikipedia", "Google"};
+        String[] apiSecenekleri = {"Wikipedia", "Google", "DuckDuckGo"};
         JComboBox<String> apiComboBox = new JComboBox<>(apiSecenekleri);
 
         // Üst panel
@@ -82,6 +80,8 @@ public class AramaMotoruGUI {
                 return "<html><body>" + WikipediaSearcher.search(query) + "</body></html>";
             case "Google":
                 return "<html><body>" + GoogleSearch.search(query) + "</body></html>";
+            case "DuckDuckGo":
+                return "<html><body>" + DuckDuckGoSearcher.search(query) + "</body></html>";
             default:
                 return "<html><body>Seçilen API geçersiz!</body></html>";
         }
