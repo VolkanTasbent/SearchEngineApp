@@ -11,8 +11,8 @@ public class GoogleSearch {
     private static final OkHttpClient client = new OkHttpClient();
 
     public static String search(String query) throws Exception {
-        String apiKey = "YOUR_GOOGLE_API_KEY";  // Buraya Google API anahtarınızı girin
-        String cseId = "YOUR_CSE_ID";  // Buraya Google Custom Search Engine ID'nizi girin
+        String apiKey = "AIzaSyC7xA0rnDNh_eBX-VBg7kstfPESk1vI1t8";  
+        String cseId = "YOUR_CSE_ID";  // Buraya Google Custom Search Engine ID'nizi girin ben anahtar almadım alınca çalışır
         String url = "https://www.googleapis.com/customsearch/v1?q=" + query.replace(" ", "+") + "&key=" + apiKey + "&cx=" + cseId;
 
         Request request = new Request.Builder()
